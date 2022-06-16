@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Car Performance Prediction</title>
+
+
+<style>
+body
+{
+background-image:url('http://m.gettywallpapers.com/wp-content/uploads/2021/09/Cars-Wallpapers.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+height:100%;
+text-align:center;
+}
+h1
+{
+ color:white;
+}
+input,button {  
+	margin-bottom: 10px; 
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: purple;
+	text-shadow: 1px 1px 1px rgba(255,182,193,0.5);
+	border: 1px solid rgba(128,0,128,0.4);
+	border-radius: 4px;
+}
+p{
+    color:white;
+    font-size:25px;
+}
+.login{
+top: 20%;
+}
+.bar
+{
+margin: 0px;
+padding:20px;
+background-color:white;
+opacity:0.6;
+color:black;
+font-family:'Roboto',sans-serif;
+font-style: italic;
+border-radius:20px;
+font-size:25px;
+}
+h3
+{
+margin: 0px;
+padding:20px;
+background-color:#9ACD32;
+width: 800px;
+opacity:0.6;
+color:#000000;
+font-family:'Roboto',sans-serif;
+font-style: italic;
+border-radius:20px;
+font-size:25px;
+}
+a
+{
+color:white;
+float:right;
+text-decoration:none;
+font-style:normal;
+font-size: 25px;
+padding-right:20px;
+}
+a:hover{
+background-color:black;
+color:white;
+border-radius:15px;0
+font-size:30px;
+padding-left:10px;
+}
+.div1{
+  background-color: lightgrey;
+  width: 500px;
+  border: 10px solid peach;
+  padding: 20px;
+  margin: 20px;
+  height: 500px;
+}
+
+
+
+
+
+.header {	position: relative;
+			top:0;	
+			margin:0px;
+			z-index: 1;
+			left: 0px;
+			right: 0px;
+			position: fixed;
+			background-color: #8B008B ;
+			color: white;
+			box-shadow: 0px 8px 4px grey;
+			overflow: hidden;
+			padding-left:20px;
+			font-family: 'Josefin Sans'
+			font-size: 2vw;
+			width: 100%;
+			height:8%;
+			text-align: center;
+		}
+		.topnav {
+  overflow: hidden;
+  background-color: #FCAD98;
+}
+
+.topnav-right a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.topnav-right a:hover {
+  background-color: #FF69B4;
+  color: black;
+}
+
+.topnav-right a.active {
+  background-color: #DA70D6;
+  color: black;
+}
+
+.topnav-right {
+  float: right;
+  padding-right:100px;
+}
+</style>
+</head>
+
+<body>
+
+     <a   href="{{ url_for('predict1')}}">Resale</a>
+     <a   href="{{ url_for('car')}}">Performance</a>
+     <a class="active" href="{{ url_for('home')}}">Home</a>
+  
+ <div class="login">
+ 
+	<center><h1>Car Performance Prediction</h1></center>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post" >
+          <input type="number"  name="cylinders" required placeholder="Number of Cylinders"><br>
+          <input type="number" step="any" name="displacement" class="form-control" required
+            placeholder="Displacement"><br>
+      
+          <input type="number" name="weight" class="form-control" required placeholder="Weight"><br>
+       
+          <input type="number" step=any name="acceleration" class="form-control" required placeholder="Acceleration"><br>
+       
+          <input type="number" name="horsepower" class="form-control" required placeholder="Horse Power"><br>
+       
+          <input type="number" name="model year" class="form-control"  required placeholder="Model Year"><br>
+       
+          <input type="number" name="origin" class="form-control"required placeholder="Origin"><br>
+       
+          <input type="text" name="car name" autocomplete="on" class="form-control" required placeholder="Car name"><br>
+       
+          <button id="sub" class="btn btn-dark" type="button">Predict</button>
+          <br>
+     
+    
+    </form>
+
+   <br>
+   <br>
+   <p>
+   {{ prediction_text }}
+    <p>
+ </div>
+
+
+</body>
+</html>
+

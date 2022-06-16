@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">   
+<style>
+body
+{
+    background-image: url("https://mcdn.wallpapersafari.com/medium/26/46/LOCUJf.jpeg");
+    background-size: cover;
+}
+.bar
+{
+margin: 0px;
+padding:20px;
+background-color:white;
+opacity:0.6;
+color:black;
+font-family:'Monaco',Monospace;
+font-style: italic;
+border-radius:20px;
+font-size:25px;
+}
+h3
+{
+margin: 0px;
+padding:20px;
+width: 800px;
+color:#000000;
+font-family:'Lucida Console',Monospace;
+font-style: normal;
+border-radius:20px;
+font-size:25px;
+}
+a
+{
+color:grey;
+float:right;
+text-decoration:none;
+font-style:normal;
+padding-right:20px;
+}
+a:hover{
+background-color:black;
+color:white;
+border-radius:15px;0
+font-size:30px;
+padding-left:10px;
+}
+.div1{
+  background-color: lightgrey;
+  width: 500px;
+  border: 10px solid peach;
+  padding: 20px;
+  margin: 20px;
+  height: 500px;
+}
+
+
+
+
+
+.header {	position: relative;
+			top:0;	
+			margin:0px;
+			z-index: 1;
+			left: 0px;
+			right: 0px;
+			position: fixed;
+			background-color: #2e37c2 ;
+			color: white;
+			box-shadow: 0px 8px 4px grey;
+			overflow: hidden;
+			padding-left:20px;
+			font-family: 'Josefin Sans'
+			font-size: 2vw;
+			width: 100%;
+			height:8%;
+			text-align: center;
+		}
+		.topnav {
+  overflow: hidden;
+  background-color: #7e89ec;
+}
+
+.topnav-right a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.topnav-right a:hover {
+  background-color: #7e89ec;
+  color: black;
+}
+
+.topnav-right a.active {
+  background-color: #7e89ec;
+  color: black;
+}
+
+.topnav-right {
+  float: right;
+  padding-right:100px;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="header">    
+<div style="width:50%;float:left;font-size:2vw;text-align:left;color:black; padding-top:1%;padding-left:5%;">Car Performance and Resale Prediction</div>
+  <div class="topnav-right"style="padding-top:0.5%;">
+    
+    <a class="active" href="{{ url_for('home')}}">Home</a>
+    <a   href="{{ url_for('car')}}">Performance</a>
+    <a   href="{{ url_for('predict1')}}">Resale</a>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>
+
+
+ 
+
+<h3>Predicting the performance level of cars is an important and interesting problem. The main goal is to predict the performance of the car to improve the certain behavior of the vehicle. This can significantly help to improve the system's fuel consumption and increase efficiency.
+
+The performance analysis of the car is based on the engine type, no of engine cylinders, fuel type, and horsepower, etc. These are the factors on which the health of the car can be predicted. The car's resale value can also be predicted so that both the buyer and seller are aware of the right market value and do not lose money..</h3>
+
+
+ 
+
+</h1>
+</body>
+</html>
